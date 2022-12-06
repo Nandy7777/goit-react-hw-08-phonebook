@@ -7,7 +7,7 @@ import { getError, getIsLoading } from 'redux/selectors';
 import Filter from 'components/Filter';
 import ContactForm from 'components/ContactForm';
 
-export default function Tasks() {
+export default function Contacts() {
   const dispatch = useDispatch();
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
