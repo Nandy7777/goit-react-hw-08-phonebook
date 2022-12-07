@@ -6,6 +6,8 @@ import { fetchContacts } from 'redux/operations';
 import { getError, getIsLoading } from 'redux/selectors';
 import Filter from 'components/Filter';
 import ContactForm from 'components/ContactForm';
+import { FormWrap } from './Contacts.styled';
+
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -17,7 +19,7 @@ export default function Contacts() {
   }, [dispatch]);
 
   return (
-    <>
+    <FormWrap>
       <Helmet>
         <title>Your contacts</title>
       </Helmet>
@@ -25,6 +27,6 @@ export default function Contacts() {
       <Filter />
       {isLoading && !error && <b>Request in progress...</b>}
       <ContactList />
-    </>
+    </FormWrap>
   );
 }

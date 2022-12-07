@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setStatusFilter } from 'redux/filterSlice';
-import { Label, Input } from '../ContactForm/ContactForm.styled';
+import { Container } from './Filter.styled';
 
 const Filter = () => {
   const dispatch = useDispatch();
@@ -9,10 +9,12 @@ const Filter = () => {
     dispatch(setStatusFilter(event.currentTarget.value));
 
   return (
-    <Label>
-      Find contacts by name
-      <Input type="text" onChange={onChange} />
-    </Label>
+    <Container>
+      <label>
+        Find contacts by name
+        <input type="text" onChange={onChange} />
+      </label>
+    </Container>
   );
 };
 
