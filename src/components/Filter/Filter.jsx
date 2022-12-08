@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { setStatusFilter } from 'redux/filterSlice';
+import { setStatusFilter } from 'redux/filter/filterSlice';
 import { Container } from './Filter.styled';
 
 const Filter = () => {

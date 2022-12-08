@@ -1,13 +1,12 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
-import  ContactList  from 'components/ContactList';
-import { fetchContacts } from 'redux/operations';
-import { getError, getIsLoading } from 'redux/selectors';
+import ContactList from 'components/ContactList';
+import { fetchContacts } from 'redux/contacts/operations';
+import { getError, getIsLoading } from 'redux/contacts/selectors';
 import Filter from 'components/Filter';
 import ContactForm from 'components/ContactForm';
 import { FormWrap } from './Contacts.styled';
-
 
 export default function Contacts() {
   const dispatch = useDispatch();
